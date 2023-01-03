@@ -3,34 +3,42 @@
         xmlns:vm="using:Cadence.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="650"
         x:Class="Cadence.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="Cadence"
-        TransparencyLevelHint="AcrylicBlur"
+        TransparencyLevelHint="None"
         Background="Transparent"
-        ExtendClientAreaToDecorationsHint="True">
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="Default"
+        ExtendClientAreaTitleBarHeightHint="-1">
     
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Design.DataContext>
 
     <!-- <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
     <Panel>
-        <ExperimentalAcrylicBorder IsHitTestVisible="False">
-            <ExperimentalAcrylicBorder.Material>
-                <ExperimentalAcrylicMaterial
-                    BackgroundSource="Digger"
-                    TintColor="Black"
-                    TintOpacity="1"
-                    MaterialOpacity="0.65" />
-            </ExperimentalAcrylicBorder.Material>
-        </ExperimentalAcrylicBorder>
-        <Panel Margin="40">
-            <Button Content="Start Tracking" Command="{Binding StartTracking}" HorizontalAlignment="Right" VerticalAlignment="Top"></Button>
-            <Button Content="test Tracking"></Button>
-        </Panel>
+        <Border IsHitTestVisible="False" Background="#1f1f1f" BoxShadow="50 50 2 2 Green"></Border>
+        <StackPanel>
+            <StackPanel Margin="15" Orientation="Horizontal">
+                <Ellipse IsHitTestVisible="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="16"
+                         Height="16" Fill="White" Margin="0,0,7,0">
+                </Ellipse>
+                <TextBlock IsHitTestVisible="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,1,0,0"
+                           FontSize="12">
+                    Cadence
+                </TextBlock>
+            </StackPanel>
+            <Rectangle Height="1" Fill="#2f2f2f"></Rectangle>
+            <Panel Margin="40">
+                <Button Content="Start Tracking" Command="{Binding StartTracking}" HorizontalAlignment="Right"
+                        VerticalAlignment="Top">
+                </Button>
+                <Button Content="test Tracking"></Button>
+            </Panel>
+        </StackPanel>
     </Panel>
 </Window>
