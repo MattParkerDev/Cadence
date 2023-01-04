@@ -68,7 +68,35 @@
                         </Button>
                     </StackPanel>
                 </Panel>
-                <Rectangle Height="60" Fill="#2f2f2f"></Rectangle>
+                <Grid ColumnDefinitions="*,*,*,*,*,*,*,*,*,*,*,*" RowDefinitions="*,*">
+                    <Rectangle Grid.Column="0" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="1" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="2" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="3" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="4" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="5" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="6" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="7" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="8" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="9" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="10" Height="60" Fill="#2f2f2f" Margin="0,0,2,0"></Rectangle>
+                    <Rectangle Grid.Row="0" Grid.Column="11" Height="60" Fill="#2f2f2f" Margin="0,0,0,0"></Rectangle>
+                    
+                    <Label Grid.Row="1" Grid.Column="0"  Margin="0,3,0,0">7am</Label>
+                    <Label Grid.Row="1" Grid.Column="1"  Margin="0,3,0,0">8am</Label>
+                    <Label Grid.Row="1" Grid.Column="2"  Margin="0,3,0,0">9am</Label>
+                    <Label Grid.Row="1" Grid.Column="3"  Margin="0,3,0,0">10am</Label>
+                    <Label Grid.Row="1" Grid.Column="4"  Margin="0,3,0,0">11am</Label>
+                    <Label Grid.Row="1" Grid.Column="5"  Margin="0,3,0,0">12pm</Label>
+                    <Label Grid.Row="1" Grid.Column="6"  Margin="0,3,0,0">1pm</Label>
+                    <Label Grid.Row="1" Grid.Column="7"  Margin="0,3,0,0">2pm</Label>
+                    <Label Grid.Row="1" Grid.Column="8"  Margin="0,3,0,0">3pm</Label>
+                    <Label Grid.Row="1" Grid.Column="9"  Margin="0,3,0,0">4pm</Label>
+                    <Label Grid.Row="1" Grid.Column="10" Margin="0,3,0,0">5pm</Label>
+                    <Label Grid.Row="1" Grid.Column="11" Margin="0,3,0,0">6pm</Label>
+                    
+                </Grid>
+                <!-- <Rectangle Height="60" Fill="#2f2f2f"></Rectangle> -->
                 <Slider></Slider>
                 <Button Content="Start Tracking" Command="{Binding StartTracking}">
                 </Button>
