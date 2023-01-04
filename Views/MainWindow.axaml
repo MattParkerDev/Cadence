@@ -11,8 +11,10 @@
         Background="Transparent"
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints="Default"
-        ExtendClientAreaTitleBarHeightHint="-1">
-    
+        ExtendClientAreaTitleBarHeightHint="-1"
+        MinWidth="1000"
+        MinHeight="650">
+
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
@@ -22,6 +24,12 @@
     <!-- <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
     <Panel>
         <Border IsHitTestVisible="False" Background="#1f1f1f" BoxShadow="50 50 2 2 Green"></Border>
+
+        <TextBlock IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,16,0,0"
+                   FontSize="12">
+            9:41:31
+        </TextBlock>
+
         <StackPanel>
             <StackPanel Margin="15" Orientation="Horizontal">
                 <Ellipse IsHitTestVisible="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="16"
@@ -32,13 +40,40 @@
                     Cadence
                 </TextBlock>
             </StackPanel>
+
             <Rectangle Height="1" Fill="#2f2f2f"></Rectangle>
-            <Panel Margin="40">
-                <Button Content="Start Tracking" Command="{Binding StartTracking}" HorizontalAlignment="Right"
-                        VerticalAlignment="Top">
+
+            <StackPanel Margin="20">
+                <Panel Margin="0,0,0,20">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Button Width="40" Height="40" HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center" Content="&lt;">
+                        </Button>
+                        <CalendarDatePicker Height="40"></CalendarDatePicker>
+                        <Button Width="40" Height="40" Margin="0,0,100,0" HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center" Content="&gt;">
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Height="40" VerticalContentAlignment="Center" Content="Currently Tracking: "></Label>
+                        <Label Height="40" VerticalContentAlignment="Center" FontWeight="Bold" Content="937135"></Label>
+                        <Label Height="40" VerticalContentAlignment="Center" Content="My Computer Won't Turn on"></Label>
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Right">
+                        <Button Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                Margin="150,0,0,0" Content="Stop Tracking">
+                        </Button>
+                    </StackPanel>
+                </Panel>
+                <Rectangle Height="60" Fill="#2f2f2f"></Rectangle>
+                <Slider></Slider>
+                <Button Content="Start Tracking" Command="{Binding StartTracking}">
                 </Button>
                 <Button Content="test Tracking"></Button>
-            </Panel>
+
+            </StackPanel>
         </StackPanel>
     </Panel>
 </Window>
