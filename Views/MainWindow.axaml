@@ -3,6 +3,7 @@
         xmlns:vm="using:Cadence.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="650"
         x:Class="Cadence.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -49,7 +50,7 @@
                         <Button Width="40" Height="40" HorizontalContentAlignment="Center"
                                 VerticalContentAlignment="Center" Content="&lt;">
                         </Button>
-                        <CalendarDatePicker Height="40"></CalendarDatePicker>
+                        <CalendarDatePicker Height="40" SelectedDate="{Binding Source={x:Static sys:DateTime.Now}}"></CalendarDatePicker>
                         <Button Width="40" Height="40" Margin="0,0,100,0" HorizontalContentAlignment="Center"
                                 VerticalContentAlignment="Center" Content="&gt;">
                         </Button>
